@@ -1,0 +1,7 @@
+.scroll-block {
+    overflow: scroll;
+    height: 400px;
+    margin: 30px;
+    background-color: #DE4015;
+    position: relative;
+}

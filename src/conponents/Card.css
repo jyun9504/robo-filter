@@ -1,0 +1,29 @@
+.card {
+    max-width: 240px
+}
+
+.img-block {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: #FFCC00;
+}
+
+.loading-card {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    width: 100%;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+}
