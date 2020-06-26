@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Helmet } from 'react-helmet';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger} from 'redux-logger';
@@ -17,9 +18,14 @@ const logger =  createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
+const title = 'Robo Filter';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={ store }>
+      <Helmet>
+        <title>{ title }</title>
+      </Helmet>
       <App />
     </Provider>
   </React.StrictMode>,
