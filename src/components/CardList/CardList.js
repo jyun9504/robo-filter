@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Card from './Card';
-import ErrorBoundry from './ErrorBoundry';
+import Card from '../Card/Card';
+import ErrorBoundry from '../ErrorBoundry/ErrorBoundry';
 
 const CardList = ({ robots }) => {
   return (

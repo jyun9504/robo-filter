@@ -10,7 +10,7 @@ import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 import App from './containers/App';
-import { searchRobots, requestRobots } from './reducers'
+import { searchRobots, requestRobots } from './redux/reducers/reducers'
 import 'tachyons';
 
 const logger =  createLogger();

@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 import './App.css'
 
-import CardList from '../conponents/CardList';
-import SearchBox from '../conponents/SearchBox';
-import Scroll from '../conponents/Scroll';
-import ErrorBoundry from '../conponents/ErrorBoundry'
+import CardList from '../components/CardList/CardList';
+import SearchBox from '../components/SearchBox/SearchBox';
+import Scroll from '../components/Scroll/Scroll';
+import ErrorBoundry from '../components/ErrorBoundry/ErrorBoundry'
 
-import { setSearchField, requestRobots } from '../actions'
+import { setSearchField, requestRobots } from '../redux/actions/actions'
 
 const mapStateToProps = state => {
   return {
