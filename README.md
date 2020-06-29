@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Robo Filter
 
-## Available Scripts
+[DEMO](https://jyun9504.github.io/robo-filter/)
 
-In the project directory, you can run:
+## 功能：
 
-### `npm start`
+- 因 ReactJS 元件化的特性將 App 區分為不同元件，網頁主要分為兩個區塊：
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  1. 搜尋欄
+  2. 卡片列表
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+   透過搜尋欄輸入的文字，以名字對機器人卡片做篩選。
 
-### `npm test`
+- 透過 Redux 管理狀態，使用 redux-logger 追蹤狀態變化，redux-thunk 實現 action 非同步 dispatch。
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 使用 Promise 物件 then catch 管理 request。
 
-### `npm run build`
+- 使用 onLoad 事件做圖片 Loading。
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 卡片資料使用 fetch 對 JSONPlaceholder 提供的假會員資料串接。
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- 樣式使用 tachyons component library 加上一點 css。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 資料夾結構：
+src/  
+&nbsp; &nbsp;L assets/   
+&nbsp; &nbsp;L components/  
+&nbsp; &nbsp; &nbsp; &nbsp;L Card/  
+&nbsp; &nbsp; &nbsp; &nbsp;L CardList/  
+&nbsp; &nbsp; &nbsp; &nbsp;L ErrorBoundry/  
+&nbsp; &nbsp; &nbsp; &nbsp;L Scroll/  
+&nbsp; &nbsp; &nbsp; &nbsp;L SearchBox/  
+&nbsp; &nbsp;L containers/  
+&nbsp; &nbsp; &nbsp; &nbsp;L App/  
+&nbsp; &nbsp;L redux/  
+&nbsp; &nbsp; &nbsp; &nbsp;L actions/  
+&nbsp; &nbsp; &nbsp; &nbsp;L constants/  
+&nbsp; &nbsp; &nbsp; &nbsp;L reducers/  
+  
+## 使用套件：
+- creact-react-app
+- redux-logger
+- redux-thunk
+- react-helmet
+- tachyons
 
-### `npm run eject`
+## Project setup
+```
+npm i
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Compiles and hot-reloads for development
+```
+npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Compiles and minifies for production
+```
+npm run build
+```
