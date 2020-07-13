@@ -37,12 +37,12 @@ class App extends Component {
     });
     return isPending ? (
       <div className="tc">
-      <h1 className="f1">Robo Filter</h1>
-      <h2 className="loading-text f2 f-sega">Loading</h2>
+        <h1 className="f1">Robo Filter</h1>
+        <h2 className="loading-text f2 f-sega">Loading</h2>
       </div>
     ) : (
       <div className="tc">
-        <h1 className="f1">Robo Filter</h1>
+        <h1 className="f1" >Robo Filter</h1>
         <SearchBox searchChange={ onSearchChange }/>
         <Scroll>
           <ErrorBoundry>
